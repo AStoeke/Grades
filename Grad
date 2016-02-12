@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class Grades
+{
+   public static void main (String[] args) {
+       Scanner scan = new Scanner(System.in);
+       int percent;
+       boolean boo;
+       
+       System.out.println("Please enter the percent you got on your last test. ");
+       percent = scan.nextInt();
+       
+       
+       if(percent >= 90) {
+           if(percent >= 100) {
+               System.out.println("You earned an \"A+.\"");
+               System.out.println("Wow, over 100%!");
+           }
+           else {
+           System.out.println("You earned an \"A.\"");
+           System.out.println("Good job!");
+           System.out.println("You must have really studied!");
+        }
+       }
+       else if(percent >= 80) {
+           System.out.println("You earned a \"B.\"");
+           System.out.println("Pretty good!");
+       }
+       else if(percent >= 70){
+           System.out.println("You earned a \"C.\"");
+           System.out.println("Are you good with being average?");
+           System.out.println("Maybe try a little harder next time.");
+       }
+       else if(percent >= 61) {
+           System.out.println("You earned a \"D.\"");
+           System.out.println("Well. At least it's not an F.");
+       }
+       else if(percent == 60) {
+           boo = true;
+            if(boo == true) {
+                System.out.println("You earned a \"D\"... but only by one point.");
+                System.out.println("Wow, close call.");
+           }
+       }
+       else if(percent < 0) {
+           System.out.println("That is an invalid score.");
+           System.out.println("Quit wasting my time!");
+       }
+       else {
+           System.out.println("You earned an \"F.\"");
+           System.out.println("Yikes.");
+       }
+   }
+}
